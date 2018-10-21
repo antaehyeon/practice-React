@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import MyName from './MyName';
 
 class App extends Component {
   render() {
@@ -17,9 +18,12 @@ class App extends Component {
 
     // JSX
     return (
-      <div className="App">
+      <fragment>
+        <div className="App">
         I LOVE REACT
-      </div>
+        </div>
+        <MyName></MyName>
+      </fragment>
     );
   }
 }
