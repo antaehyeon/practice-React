@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import MyName from './MyName';
+import MyName from './MyName.js';
+import Counter from './Counter.js';
 
 class App extends Component {
   render() {
@@ -18,12 +19,13 @@ class App extends Component {
 
     // JSX
     return (
-      <fragment>
+      <div>
         <div className="App">
         I LOVE REACT
         </div>
         <MyName></MyName>
-      </fragment>
+        <Counter></Counter>
+      </div>
     );
   }
 }
