@@ -3,10 +3,11 @@ import './Movie.css';
 
 class Movie extends Component {
     render() {
+        console.log(this.props.poster);
         return (
             <div>
-                <MoviePoster/>
-                <h1>HELLO! MY NAME IS HOYEON FUCK MAN~</h1>
+                <MoviePoster poster={this.props.poster}/>
+                <h1>{this.props.title}</h1>
             </div>
         )
     }
@@ -15,7 +16,7 @@ class Movie extends Component {
 class MoviePoster extends Component {
     render() {
         return (
-            <img src="https://i.imgur.com/tSukFdb.jpg" alt=""/>
+            <img src={this.props.poster} alt=""/>
         )
     }
 }
