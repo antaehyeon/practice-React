@@ -29,12 +29,23 @@ class App extends Component {
 
   componentDidMount() {
     console.log('DID MOUNT');
+    setTimeout(() => {
+      // this.state.greeting = "BYE";
+      this.setState({
+        greeting: 'BYE',
+      })
+    }, 5000);
+  }
+
+  state = {
+    greeting: 'HELLO !',
   }
 
   render() {
     console.log('RENDER');
     return (
       <div className="App">
+        {this.state.greeting}
         {movies.map((movie, index) => {
           return <Movie key={index} title={movie.title} poster={movie.poster}/>
         })}
