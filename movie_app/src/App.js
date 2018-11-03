@@ -3,9 +3,7 @@ import "./App.css";
 import Movie from "./Movie";
 
 class App extends Component {
-  state = {
-    greeting: "HELLO !"
-  };
+  state = {};
 
   componentWillMount() {
     console.log("WILL MOUNT");
@@ -13,28 +11,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("DID MOUNT");
-    setTimeout(() => {
-      this.setState({
-        movies: [
-          {
-            title: "Matrix",
-            poster: "https://i.imgur.com/ZhmnxQC.png"
-          },
-          {
-            title: "Full Metal Jacket",
-            poster: "https://i.imgur.com/ZhmnxQC.png"
-          },
-          {
-            title: "Oldboy",
-            poster: "https://i.imgur.com/tSukFdb.jpg"
-          },
-          {
-            title: "Star Wars",
-            poster: "https://i.imgur.com/KV4jBox.jpg"
-          }
-        ]
-      });
-    }, 2000);
+    console.log(fetch("https://yts.am/api/v2/list_movies.json?sort_by=rating"));
   }
 
   _renderMovies = () => {
