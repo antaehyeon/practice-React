@@ -19,14 +19,14 @@ const movies = [
     title: 'Star Wars',
     poster: 'https://i.imgur.com/KV4jBox.jpg',
   },
-]
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {movies.map(movie => {
-          return <Movie title={movie.title} poster={movie.poster}/>
+        {movies.map((movie, index) => {
+          return <Movie key={index} title={movie.title} poster={movie.poster}/>
         })}
       </div>
     );
